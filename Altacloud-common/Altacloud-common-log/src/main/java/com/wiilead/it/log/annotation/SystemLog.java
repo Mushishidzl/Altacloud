@@ -3,7 +3,7 @@ package com.wiilead.it.log.annotation;
 import java.lang.annotation.*;
 
 /**
- * @ClassName: SysLog
+ * @ClassName: SystemLog
  * @Description: 日志注解
  * @Author mushishi
  * @Date 2019/4/18-16:59
@@ -11,7 +11,7 @@ import java.lang.annotation.*;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface SysLog {
+public @interface SystemLog {
 
 
     /**

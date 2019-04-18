@@ -1,6 +1,6 @@
 package com.wiilead.it.log.aspect;
 
-import com.wiilead.it.log.annotation.SysLog;
+import com.wiilead.it.log.annotation.SystemLog;
 import com.wiilead.it.log.util.SysLogUtils;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -19,15 +19,15 @@ import org.aspectj.lang.annotation.Aspect;
 public class SysLogSpect {
 
 
-    @Around("@annotation(sysLog)")
+    @Around("@annotation(systemLog)")
     @SneakyThrows
-    public Object around(ProceedingJoinPoint point, SysLog sysLog) {
+    public Object around(ProceedingJoinPoint point, SystemLog systemLog) {
         String strClassName = point.getTarget().getClass().getName();
         String strMethodName = point.getSignature().getName();
         log.debug("[类名]:{},[方法]:{}", strClassName, strMethodName);
 
-        com.wiilead.it.log.SysLog logVo = SysLogUtils.getSysLog();
-        logVo.setTitle(sysLog.value());
+        SysLogUtils.getSysLog();
+        logVo.setTitle(systemLog.desc());
         // 发送异步日志事件
         Long startTime = System.currentTimeMillis();
         Object obj = point.proceed();

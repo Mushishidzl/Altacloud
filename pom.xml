@@ -22,17 +22,10 @@
         <module>Altacloud-common</module>
         <module>Altacloud-auth</module>
         <module>Altacloud-gateway</module>
-        <module>Altacloud-sysmanager</module>
-        <module>Altacloud-vm</module>
-        <module>Altacloud-pm</module>
-        <module>Altacloud-workflow</module>
-        <module>Altacloud-alm</module>
-        <module>Altacloud-form</module>
-        <module>Altacloud-filemanager</module>
-        <module>Altacloud-message</module>
         <module>Altacloud-sso</module>
-        <module>Altacloud-crawler</module>
         <module>Altacloud-job</module>
+        <module>Altacloud-provider-api</module>
+        <module>Altacloud-provider-biz</module>
     </modules>
 
 

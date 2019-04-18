@@ -21,6 +21,7 @@
         <module>Altacloud-common-config</module>
         <module>Altacloud-common-swagger</module>
         <module>Altacloud-common-redis</module>
+        <module>Altacloud-common-db</module>
     </modules>
 
 

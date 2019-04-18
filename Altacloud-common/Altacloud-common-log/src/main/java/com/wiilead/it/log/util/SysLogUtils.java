@@ -1,8 +1,6 @@
 package com.wiilead.it.log.util;
 
 
-import com.wiilead.it.log.SysLog;
-
 /**
  * @ClassName: SysLogUtils
  * @Description: 日志操作工具类
