@@ -1,0 +1,22 @@
+spring:
+  # 配置中心
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config/
+
+# 注册中心配置
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://root:root@192.168.31.216:8762/eureka/
+
+# 暴露监控端点
+#management:12
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'

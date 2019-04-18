@@ -1,0 +1,21 @@
+server:
+  port: 8088
+
+spring:
+  profiles:
+    active: native
+  application:
+    name: "@pom.artifactId@"
+    #  rabbitmq:
+    #    host: paascloud-mq-rabbit
+    #    port: 5672
+    #    username: guest
+    #    password: guest
+  boot:
+    admin:
+      username: alta
+      password: alta
+  security:
+    user:
+      name: alta
+      password: alta

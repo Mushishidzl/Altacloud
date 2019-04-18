@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        service-id: ALTACLOUD-CONFIG
+        enabled: true
+      label: ${spring.profiles.active}
+      profile: ${spring.profiles.active}
+#      username: admin
+#      password: admin
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@Altacloud-eureka:8762/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+#management:
+#  context-path: /
