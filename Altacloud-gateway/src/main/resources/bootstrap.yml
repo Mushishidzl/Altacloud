@@ -9,6 +9,12 @@ spring:
       profile: ${spring.profiles.active}
 #      username: admin
 #      password: admin
+#    网关配置
+    gateway:
+      discovery:
+        locator:
+#          是否与服务发现组件进行结合，通过 serviceId 转发到具体的服务实例。默认为false，设为true便开启通过服务中心的自动根据 serviceId 创建路由的功能。
+          enabled: true
 
 eureka:
   client:
