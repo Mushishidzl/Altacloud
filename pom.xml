@@ -36,6 +36,7 @@
         <spring-boot-admin.version>2.1.3</spring-boot-admin.version>
         <hutool.version>4.5.0</hutool.version>
         <mybatis-plus.version>3.1.0</mybatis-plus.version>
+        <druid-starter>1.1.10</druid-starter>
         <!--验证码-->
         <kaptcha.version>0.0.9</kaptcha.version>
         <!--代码生成模板引擎-->
@@ -61,6 +62,11 @@
         <!--业务模块通用版本-->
         <altacloud.common.core>1.0-SNAPSHOT</altacloud.common.core>
         <altacloud.common.security>1.0-SNAPSHOT</altacloud.common.security>
+        <altacloud.common.db>1.0-SNAPSHOT</altacloud.common.db>
+        <altacloud.common.redis>1.0-SNAPSHOT</altacloud.common.redis>
+        <altacloud.common.log>1.0-SNAPSHOT</altacloud.common.log>
+        <altacloud.common.swagger>1.0-SNAPSHOT</altacloud.common.swagger>
+        <altacloud.common.config>1.0-SNAPSHOT</altacloud.common.config>
     </properties>
 
     <dependencies>
@@ -174,6 +180,12 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
+            <!-- druid 官方 starter -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-starter}</version>
+            </dependency>
             <!--common-->
             <dependency>
                 <groupId>com.wiilead.it</groupId>
@@ -185,6 +197,36 @@
                 <groupId>com.wiilead.it</groupId>
                 <artifactId>Altacloud-common-security</artifactId>
                 <version>${altacloud.common.security}</version>
+            </dependency>
+            <!--数据库模块-->
+            <dependency>
+                <groupId>com.wiilead.it</groupId>
+                <artifactId>Altacloud-common-db</artifactId>
+                <version>${altacloud.common.db}</version>
+            </dependency>
+            <!--redis缓存模块-->
+            <dependency>
+                <groupId>com.wiilead.it</groupId>
+                <artifactId>Altacloud-common-redis</artifactId>
+                <version>${altacloud.common.redis}</version>
+            </dependency>
+            <!--日志模块-->
+            <dependency>
+                <groupId>com.wiilead.it</groupId>
+                <artifactId>Altacloud-common-log</artifactId>
+                <version>${altacloud.common.log}</version>
+            </dependency>
+            <!--swagger模块-->
+            <dependency>
+                <groupId>com.wiilead.it</groupId>
+                <artifactId>Altacloud-common-swagger</artifactId>
+                <version>${altacloud.common.swagger}</version>
+            </dependency>
+            <!--config模块-->
+            <dependency>
+                <groupId>com.wiilead.it</groupId>
+                <artifactId>Altacloud-common-config</artifactId>
+                <version>${altacloud.common.config}</version>
             </dependency>
             <!--代码生成模板引擎-->
             <dependency>
@@ -256,6 +298,17 @@
                 <groupId>com.didispace</groupId>
                 <artifactId>swagger-butler-core</artifactId>
                 <version>${swagger.butler.version}</version>
+            </dependency>
+            <!---->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>${mybatis-plus.version}</version>
             </dependency>
 
         </dependencies>
