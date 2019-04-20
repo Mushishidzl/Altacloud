@@ -42,9 +42,9 @@ public class GenUtils {
 	private static final String CONTROLLER_JAVA_VM = "Controller.java.vm";
 	private static final String MAPPER_XML_VM = "Mapper.xml.vm";
 	private static final String MENU_SQL_VM = "menu.sql.vm";
-	private static final String INDEX_VUE_VM = "index.vue.vm";
-	private static final String API_JS_VM = "api.js.vm";
-	private static final String CRUD_JS_VM = "crud.js.vm";
+//	private static final String INDEX_VUE_VM = "index.vue.vm";
+//	private static final String API_JS_VM = "api.js.vm";
+//	private static final String CRUD_JS_VM = "crud.js.vm";
 
 	private List<String> getTemplates() {
 		List<String> templates = new ArrayList<>();
@@ -256,19 +256,19 @@ public class GenUtils {
 			return className.toLowerCase() + "_menu.sql";
 		}
 
-		if (template.contains(INDEX_VUE_VM)) {
-			return CommonConstants.FRONT_END_PROJECT + File.separator + "src" + File.separator + "views" +
-				File.separator + moduleName + File.separator + className.toLowerCase() + File.separator + "index.vue";
-		}
-
-		if (template.contains(API_JS_VM)) {
-			return CommonConstants.FRONT_END_PROJECT + File.separator + "src" + File.separator + "api" + File.separator + moduleName + File.separator + className.toLowerCase() + ".js";
-		}
-
-		if (template.contains(CRUD_JS_VM)) {
-			return CommonConstants.FRONT_END_PROJECT + File.separator + "src" + File.separator + "const" +
-				File.separator + "crud" + File.separator + moduleName + File.separator + className.toLowerCase() + ".js";
-		}
+//		if (template.contains(INDEX_VUE_VM)) {
+//			return CommonConstants.FRONT_END_PROJECT + File.separator + "src" + File.separator + "views" +
+//				File.separator + moduleName + File.separator + className.toLowerCase() + File.separator + "index.vue";
+//		}
+//
+//		if (template.contains(API_JS_VM)) {
+//			return CommonConstants.FRONT_END_PROJECT + File.separator + "src" + File.separator + "api" + File.separator + moduleName + File.separator + className.toLowerCase() + ".js";
+//		}
+//
+//		if (template.contains(CRUD_JS_VM)) {
+//			return CommonConstants.FRONT_END_PROJECT + File.separator + "src" + File.separator + "const" +
+//				File.separator + "crud" + File.separator + moduleName + File.separator + className.toLowerCase() + ".js";
+//		}
 
 		return null;
 	}

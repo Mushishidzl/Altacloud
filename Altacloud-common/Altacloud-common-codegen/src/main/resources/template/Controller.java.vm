@@ -1,36 +1,19 @@
-/*
- *    Copyright (c) 2018-2025, lengleng All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright
- * notice, this list of conditions and the following disclaimer in the
- * documentation and/or other materials provided with the distribution.
- * Neither the name of the pig4cloud.com developer nor the names of its
- * contributors may be used to endorse or promote products derived from
- * this software without specific prior written permission.
- * Author: lengleng (wangiegie@gmail.com)
- */
 package ${package}.${moduleName}.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.pig4cloud.pig.common.core.util.R;
-import com.pig4cloud.pig.common.log.annotation.SysLog;
+import com.wiilead.it.model.ResultVO;
+import com.wiilead.it.log.annotation.LogAnnotation
 import ${package}.${moduleName}.entity.${className};
 import ${package}.${moduleName}.service.${className}Service;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-
 /**
- * ${comments}
- *
- * @author ${author}
- * @date ${datetime}
+ * @ClassName ${className}Controller
+ * @Description TODO
+ * @Author ${author}
+ * @Date ${datetime}
  */
 @RestController
 @AllArgsConstructor
@@ -46,55 +29,55 @@ public class ${className}Controller {
    * @return
    */
   @GetMapping("/page")
-  public R<IPage<${className}>> get${className}Page(Page<${className}> page, ${className} ${classname}) {
-    return  new R<>(${classname}Service.get${className}Page(page,${classname}));
+  public ResultVO<IPage<${className}>> get${className}Page(Page<${className}> page, ${className} ${classname}) {
+    return  new ResultVO<>(${classname}Service.get${className}Page(page,${classname}));
   }
 
 
   /**
    * 通过id查询单条记录
    * @param ${pk.lowerAttrName}
-   * @return R
+   * @return ResultVO
    */
   @GetMapping("/{${pk.lowerAttrName}}")
-  public R<${className}> getById(@PathVariable("${pk.lowerAttrName}") ${pk.attrType} ${pk.lowerAttrName}){
-    return new R<>(${classname}Service.getById(${pk.lowerAttrName}));
+  public ResultVO<${className}> getById(@PathVariable("${pk.lowerAttrName}") ${pk.attrType} ${pk.lowerAttrName}){
+    return new ResultVO<>(${classname}Service.getById(${pk.lowerAttrName}));
   }
 
   /**
    * 新增记录
    * @param ${classname}
-   * @return R
+   * @return ResultVO
    */
-  @SysLog("新增${comments}")
+  @LogAnnotation("新增${comments}")
   @PostMapping
   @PreAuthorize("@pms.hasPermission('${moduleName}_${pathName}_add')")
-  public R save(@RequestBody ${className} ${classname}){
-    return new R<>(${classname}Service.save(${classname}));
+  public ResultVO save(@RequestBody ${className} ${classname}){
+    return new ResultVO<>(${classname}Service.save(${classname}));
   }
 
   /**
    * 修改记录
    * @param ${classname}
-   * @return R
+   * @return ResultVO
    */
-  @SysLog("修改${comments}")
+  @LogAnnotation("修改${comments}")
   @PutMapping
   @PreAuthorize("@pms.hasPermission('${moduleName}_${pathName}_edit')")
-  public R update(@RequestBody ${className} ${classname}){
-    return new R<>(${classname}Service.updateById(${classname}));
+  public ResultVO update(@RequestBody ${className} ${classname}){
+    return new ResultVO<>(${classname}Service.updateById(${classname}));
   }
 
   /**
    * 通过id删除一条记录
    * @param ${pk.lowerAttrName}
-   * @return R
+   * @return ResultVO
    */
-  @SysLog("删除${comments}")
+  @LogAnnotation("删除${comments}")
   @DeleteMapping("/{${pk.lowerAttrName}}")
   @PreAuthorize("@pms.hasPermission('${moduleName}_${pathName}_del')")
-  public R removeById(@PathVariable ${pk.attrType} ${pk.lowerAttrName}){
-    return new R<>(${classname}Service.removeById(${pk.lowerAttrName}));
+  public ResultVO removeById(@PathVariable ${pk.attrType} ${pk.lowerAttrName}){
+    return new ResultVO<>(${classname}Service.removeById(${pk.lowerAttrName}));
   }
 
 }

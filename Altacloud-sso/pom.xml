@@ -14,4 +14,25 @@
 
     <description>单点登录服务模块</description>
 
+
+    <dependencies>
+        <!--通用模块-->
+        <dependency>
+            <groupId>com.wiilead.it</groupId>
+            <artifactId>Altacloud-common-db</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wiilead.it</groupId>
+            <artifactId>Altacloud-common-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wiilead.it</groupId>
+            <artifactId>Altacloud-common-log</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wiilead.it</groupId>
+            <artifactId>Altacloud-common-swagger</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>

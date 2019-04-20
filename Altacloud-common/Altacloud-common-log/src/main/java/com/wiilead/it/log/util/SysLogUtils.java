@@ -1,6 +1,8 @@
 package com.wiilead.it.log.util;
 
 
+import com.wiilead.it.sysmanager.api.model.vo.SysLogVO;
+
 /**
  * @ClassName: SysLogUtils
  * @Description: 日志操作工具类
@@ -11,8 +13,8 @@ public class SysLogUtils {
 
 
 
-    public static SysLog getSysLog() {
+    public static SysLogVO getSysLog() {
 
-        return new SysLog();
+        return new SysLogVO();
     }
 }
