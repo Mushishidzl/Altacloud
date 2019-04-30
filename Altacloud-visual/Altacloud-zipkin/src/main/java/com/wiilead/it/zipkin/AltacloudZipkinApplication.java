@@ -16,10 +16,10 @@ import javax.sql.DataSource;
  */
 @EnableZipkinServer
 @SpringCloudApplication
-public class AltacloudZipkinController {
+public class AltacloudZipkinApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AltacloudZipkinController.class, args);
+        SpringApplication.run(AltacloudZipkinApplication.class, args);
     }
 
     @Bean

@@ -186,6 +186,7 @@
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid-starter}</version>
             </dependency>
+            <!--Altacloud-common begin -->
             <!--common-->
             <dependency>
                 <groupId>com.wiilead.it</groupId>
@@ -228,6 +229,7 @@
                 <artifactId>Altacloud-common-config</artifactId>
                 <version>${altacloud.common.config}</version>
             </dependency>
+            <!--Altacloud-common end -->
             <!--代码生成模板引擎-->
             <dependency>
                 <artifactId>velocity</artifactId>
@@ -299,7 +301,7 @@
                 <artifactId>swagger-butler-core</artifactId>
                 <version>${swagger.butler.version}</version>
             </dependency>
-            <!---->
+            <!--引入的外部工具jar-->
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
@@ -310,7 +312,6 @@
                 <artifactId>mybatis-plus</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 
@@ -351,13 +352,14 @@
                 </configuration>
             </plugin>
             <!--<plugin>-->
-                <!--<groupId>pl.project13.maven</groupId>-->
-                <!--<artifactId>git-commit-id-plugin</artifactId>-->
-                <!--<version>2.2.5</version>-->
+            <!--<groupId>pl.project13.maven</groupId>-->
+            <!--<artifactId>git-commit-id-plugin</artifactId>-->
+            <!--<version>2.2.5</version>-->
             <!--</plugin>-->
         </plugins>
     </build>
 
+    <!--仓库-->
     <repositories>
         <!--阿里云主仓库，代理了maven central和jcenter仓库-->
         <repository>
@@ -399,7 +401,7 @@
         </pluginRepository>
     </pluginRepositories>
 
-
+    <!--profiles-->
     <profiles>
         <profile>
             <id>dev</id>
@@ -409,6 +411,12 @@
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
+        </profile>
+        <profile>
+            <id>sit</id>
+            <properties>
+                <profileActive>sit</profileActive>
+            </properties>
         </profile>
         <profile>
             <id>pro</id>

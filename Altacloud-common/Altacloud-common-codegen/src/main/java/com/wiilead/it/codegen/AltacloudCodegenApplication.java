@@ -10,9 +10,9 @@ import org.springframework.cloud.client.SpringCloudApplication;
  * @Date 2019/4/18-15:10
  */
 @SpringCloudApplication
-public class AltacloudCodegenController {
+public class AltacloudCodegenApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AltacloudCodegenController.class, args);
+        SpringApplication.run(AltacloudCodegenApplication.class, args);
     }
 }

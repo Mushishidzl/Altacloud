@@ -15,5 +15,77 @@
 
     <description>流程系统业务处理模块</description>
 
+    <dependencies>
+        <!--通用模块-->
+        <dependency>
+            <groupId>com.wiilead.it</groupId>
+            <artifactId>Altacloud-common-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wiilead.it</groupId>
+            <artifactId>Altacloud-common-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wiilead.it</groupId>
+            <artifactId>Altacloud-common-swagger</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wiilead.it</groupId>
+            <artifactId>Altacloud-common-log</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wiilead.it</groupId>
+            <artifactId>Altacloud-common-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wiilead.it</groupId>
+            <artifactId>Altacloud-common-db</artifactId>
+        </dependency>
+        <!--配置中心客户端-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <!--mybatis-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+        <!--数据库-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!--web 模块-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <!--排除tomcat依赖-->
+                <exclusion>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--undertow容器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
