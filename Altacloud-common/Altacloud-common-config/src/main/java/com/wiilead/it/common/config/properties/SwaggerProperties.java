@@ -19,7 +19,7 @@ public class SwaggerProperties {
 
     private String contactName = "Altacloud";
 
-    private String contactUrl = "http://wiilead.com";
+    private String contactUrl = "http://com.wiilead.com";
 
     private String contactEmail = "";
 }

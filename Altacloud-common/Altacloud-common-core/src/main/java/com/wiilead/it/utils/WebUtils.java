@@ -26,6 +26,7 @@ import java.nio.charset.StandardCharsets;
 @Slf4j
 @UtilityClass
 public class WebUtils extends org.springframework.web.util.WebUtils {
+
 	private final String BASIC_ = "Basic ";
 	private final String UNKNOWN = "unknown";
 
